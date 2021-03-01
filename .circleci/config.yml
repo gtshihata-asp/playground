@@ -19,9 +19,9 @@ jobs:
     ####   /go/src/bitbucket.org/circleci/go-tool
     working_directory: /go/src/github.com/circleci/go-tool
     ##gtshihata-asp/playground
-    steps:
+    steps: 
       - checkout
-
       # specify any bash command here prefixed with `run: `
-      - run: go get -v -t -d ./...
-      - run: go test -v ./...
+      - run: go get "github.com/go-sql-driver/mysql"
+      - run: go get "github.com/gorilla/mux"
+      - run: ggo run api.go entry.go
